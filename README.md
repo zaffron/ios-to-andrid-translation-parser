@@ -1,15 +1,19 @@
 # ios-to-andrid-translation-parser
 
 This simple script will help you to parse your ios translation file into csv format.
+<br>
 Expected type of test cases:
-`
-xyz = "HELLO";    
-"zyx" = "yello";    
-xyz = xyz;    
-"   xyz " = "   xyz";    
+<br>
+```
+xyz = "HELLO";
+"zyx" = "yello";
+xyz = xyz;
+"   xyz " = "   xyz";
 "?&(xyz" = "?32 xyz";    
-`
-Please remove the comments if you have any.    
+```
+<br>
+Please remove the comments if you have any.
+<br>
 And remember, this is a python script so you *must have python installed on your pc or microwave where you executing this*.    
 
 ## Procedure to parse
