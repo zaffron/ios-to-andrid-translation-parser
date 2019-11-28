@@ -1,0 +1,20 @@
+import csv
+
+filename = raw_input("Enter file name:")
+file = open(filename, "r")
+if file.mode == "r":
+    contents = file.readlines()
+    parsed_contents = [];
+
+    for content in contents:
+        splitted_content = content.strip().replace('"', '').strip("\n").strip(";").split("=")
+        splitted_content = [x.strip() for x in splitted_content]
+        parsed_contents.append(splitted_content)
+
+    row = [['key', 'value']]
+    outputfile = filename + '.csv'
+    with open(outputfile, 'w') as writeFile:
+        writer = csv.writer(writeFile)
+        writer.writerows(row)
+        writer.writerows(parsed_contents)
+    writeFile.close()
